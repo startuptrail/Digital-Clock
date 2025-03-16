@@ -1,0 +1,12 @@
+{
+  "name": "digital-clock",
+  "version": "1.0.0",
+  "description": "A simple digital clock using Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
