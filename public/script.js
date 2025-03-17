@@ -11,6 +11,11 @@ function updateClock() {
     // Get date
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById("date").textContent = now.toLocaleDateString("en-US", options);
+
+    // Change emoji every second
+    const emojis = ["🔥", "⏰", "📢", "💡", "🌟"];
+    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+    document.getElementById("emoji").textContent = randomEmoji;
 }
 
 // Update clock every second
