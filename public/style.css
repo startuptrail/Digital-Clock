@@ -18,11 +18,17 @@ body {
     text-align: center;
 }
 
+/* Live Text */
+#live-text {
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+}
+
 /* Clock Styling */
 h1 {
     font-size: 5rem;
     margin: 10px 0;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Date Styling */
