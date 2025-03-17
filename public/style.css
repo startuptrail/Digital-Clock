@@ -5,36 +5,28 @@ body {
     height: 100vh;
     background-color: black;
     color: white;
-    font-family: "Arial", sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     flex-direction: column;
-}
-
-.clock-container {
     text-align: center;
+}
+
+/* Clock Container */
+.clock-container {
     padding: 20px;
-    border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    text-align: center;
 }
 
+/* Clock Styling */
 h1 {
-    font-size: 4rem;
-    margin: 0;
+    font-size: 5rem;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Date Styling */
 p {
     font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    margin: 5px 0;
 }
