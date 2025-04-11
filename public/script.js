@@ -1,18 +1,23 @@
 function updateClock() {
     const now = new Date();
-    
-    // Get time
-    const hours = String(now.getHours()).padStart(2, "0");
+
+    // Convert to 12-hour format
+    let hours = now.getHours();
     const minutes = String(now.getMinutes()).padStart(2, "0");
     const seconds = String(now.getSeconds()).padStart(2, "0");
-    
-    document.getElementById("time").textContent = `${hours}:${minutes}:${seconds}`;
+    const ampm = hours >= 12 ? "PM" : "AM";
 
-    // Get date
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Convert '0' hour to '12'
+
+    const formattedTime = `${String(hours).padStart(2, "0")}:${minutes}:${seconds} ${ampm}`;
+    document.getElementById("time").textContent = formattedTime;
+
+    // Format date
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById("date").textContent = now.toLocaleDateString("en-US", options);
 }
 
-// Update clock every second
+// Update every second
 setInterval(updateClock, 1000);
 updateClock();
