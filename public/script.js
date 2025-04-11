@@ -19,5 +19,6 @@ function updateClock() {
     document.getElementById("date").textContent = now.toLocaleDateString("en-US", options);
 }
 
+// Run clock every second
 setInterval(updateClock, 1000);
 updateClock();
