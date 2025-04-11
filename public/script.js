@@ -8,16 +8,16 @@ function updateClock() {
     const ampm = hours >= 12 ? "PM" : "AM";
 
     hours = hours % 12;
-    hours = hours ? hours : 12; // Convert '0' hour to '12'
+    hours = hours ? hours : 12; // 0 -> 12
 
-    const formattedTime = `${String(hours).padStart(2, "0")}:${minutes}:${seconds} ${ampm}`;
-    document.getElementById("time").textContent = formattedTime;
+    // Set time and am/pm
+    document.getElementById("clock-time").textContent = `${String(hours).padStart(2, "0")}:${minutes}:${seconds}`;
+    document.getElementById("ampm").textContent = ampm;
 
-    // Format date
+    // Set date
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById("date").textContent = now.toLocaleDateString("en-US", options);
 }
 
-// Update every second
 setInterval(updateClock, 1000);
 updateClock();
